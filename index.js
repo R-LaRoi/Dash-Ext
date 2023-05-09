@@ -6,6 +6,7 @@ function currentTime() {
   let clock = getTime.toLocaleTimeString("en-us", { timeStyle: "short" });
   document.getElementById("show-time").innerText = clock;
 }
+
 setInterval(currentTime, 1000);
 currentTime();
 
@@ -18,8 +19,8 @@ navigator.geolocation.getCurrentPosition((position) => {
   )
     .then((response) => response.json())
     .then((data) => {
-      // console.log(data);
-      // console.log(data.daily[0].weather[0].main);
+      console.log(data);
+      console.log(data.daily[0].weather[0].main);
       // console.log(data.current.temp);
       // console.log(data.current.weather[0].description);
 

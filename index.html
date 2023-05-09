@@ -4,29 +4,51 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chonburi&family=Major+Mono+Display&family=Poppins:wght@100;200;400;800&family=Vina+Sans&family=Ysabeau:wght@1;400&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="style.css" />
+
     <title>Dash-Ext</title>
   </head>
   <body>
     <div class="container">
-      <div class="card time">
-        <div id="show-time">time</div>
-      </div>
-      <div class="weather" id="weather">
-        weather
-        <ul id="daily"></ul>
-        <li id="five"></li>
-      </div>
+      <section class="sec-three">
+        <div class="card weather" id="weather">
+          FIVE DAY FORECAST
+          <ul id="daily"></ul>
+          <li id="five"></li>
+        </div>
+      </section>
 
-      <div class="card fact">
-        TODAY'S RANDOM FACT
+      <section class="sec-one">
+        <div class="time">
+          <div id="show-time">time</div>
+          <section class="sec-two">
+            <div>GOOD MORNING</div>
+            <div class="fact">
+              TODAY'S RANDOM FACT
+              <div id="fact"></div>
+            </div>
+          </section>
+        </div>
+      </section>
 
-        <div id="fact"></div>
-      </div>
-      <div class="card puzzle">puzzle</div>
-      <div class="card currency">
-        <ul id="currency"></ul>
-     
+      <section class="sec-four">
+        <div class="card currency">
+          CURRENCY CONVERSION
+          <ul id="currency"></ul>
+        </div>
+      </section>
+
+      <section class="content-two">
+        <div>content-2</div>
+      </section>
     </div>
   </body>
   <script src="index.js"></script>

@@ -1,5 +1,11 @@
 body{
   margin: 0;
+color: #ffffffcd;
+
+/* 
+background-image: radial-gradient(circle 972.6px at 10% 20%, rgba(243, 0, 75, 1) 0%, rgba(255, 93, 75, 1) 90%);
+ */
+
     background: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
 height: 100vh;
 }
@@ -8,52 +14,75 @@ height: 100vh;
 .container{
 height: 100vh;
 display: grid;
-grid-template-columns: 1fr 2fr 1fr;
-margin: 0px 30px;
-overflow-y: hidden;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 350px;
+grid-template-areas: "main content weather"
+" content2 content2 weather"
+;
+gap: 30px;
+
+font-family: 'Poppins', sans-serif;
+font-weight: 200;
+margin-top: 3rem;
+padding: 0px 40px;
+
+}
+
+#show-time{
+font-weight: 800;
+font-size: 5rem;
+color: #a6eb1298;
+
+/* color: #0519378d; */
+
+}
+.weather{
+grid-area: weather;
+  display: flex;
+  justify-content: center;
+height: 700px;
+
+}
+
+
+
+ul{ list-style: none;
+
 }
 
 
 .card{
-margin: 10px 0px;
-padding: 2rem 0px;
-height: 300px;
-width: 250px;
-background-color: #ffffff52;
-color: rgba(255, 255, 255, 0.431);
- box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;;
-border-radius: 10px;
+
+  background: #0519373f; 
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
 }
 
-.time{
-
-  font-size: 3rem;
+.sec-four{
+grid-area: content;
 }
 
-.weather{
+.sec-one{
+  grid-area: main;
 
-width: 350px;
-font: 400;
-color: white;
-background-color: #051937a5;
-box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  ;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-padding: 20px;
+
+}
+.sec-three{
+
+  text-align: center;
 }
 
-.day{
+.content-two{
 
-  display: flex;
-flex-direction: row;
-justify-content: center;
-gap: 10px;
-border-bottom: .1px solid rgba(255, 255, 255, 0.783);
-padding: 10px;
+  grid-area: content2;
+  height: 350px;
+  background: #0519373f;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.currency{
 
-ul{ list-style: none;}
+  height: 350px;
+}
