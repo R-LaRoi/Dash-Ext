@@ -16,8 +16,8 @@ height: 100vh;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 grid-template-rows: 350px;
-grid-template-areas: "main content weather"
-" content2 content2 weather"
+grid-template-areas: "main content content2"
+" weather weather content2"
 ;
 gap: 30px;
 
@@ -37,16 +37,9 @@ color: #a6eb1298;
 
 }
 .weather{
-grid-area: weather;
-  display: flex;
-  justify-content: center;
-height: 700px;
 
-}
+height: 350px;
 
-
-
-ul{ list-style: none;
 
 }
 
@@ -69,14 +62,14 @@ grid-area: content;
 
 }
 .sec-three{
+grid-area: weather;
 
-  text-align: center;
 }
 
 .content-two{
 
   grid-area: content2;
-  height: 350px;
+  height: 700px;
   background: #0519373f;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -85,4 +78,14 @@ grid-area: content;
 .currency{
 
   height: 350px;
+}
+
+li{
+
+font-size: 1.5rem;
+  display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap:10px;
+    
 }

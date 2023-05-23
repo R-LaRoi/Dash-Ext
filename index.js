@@ -27,22 +27,22 @@ navigator.geolocation.getCurrentPosition((position) => {
       let iconUrl = `http://openweathermap.org/img/wn/${data.current.weather[0].icon}@2x.png`;
 
       document.querySelector("#daily").innerHTML = `
-      <div>${Math.round(data.current.temp)}</div>
+      <div>${Math.round(data.current.temp)}°C</div>
       <div>${data.current.weather[0].main}</div>
       <img src ="${iconUrl}"></img>
       `;
 
       document.getElementById("five").innerHTML = `
-<div>${data.daily[0].weather[0].main}</div>
+<div>${data.daily[0].weather[0].main}°</div>
 `;
 
       let forecast = data.daily;
       let fiveDay = forecast.map((info) => {
         return `
         <div class='day'>
-        <div>${Math.round(info.temp.max)} </div>
+        <div>${Math.round(info.temp.max)}° </div>
           <div>${info.weather[0].main} </div>
-        <div>${Math.round(info.temp.min)} </div>
+        <div>${Math.round(info.temp.min)}° </div>
         </div>`;
       });
 
@@ -69,9 +69,14 @@ fetch(
 )
   .then((response) => response.json())
   .then((currency) => {
+    // const dollarValue = Object.values(currency);
+    // dollarValue.map((dollar) => {
+    //   console.log(dollar.EUR);
+    // });
     document.getElementById("currency").innerHTML = `
     <li>🇪🇺 €: ${currency.data.EUR}</li>
     <li>🇺🇸 $: ${currency.data.USD}<li>
      <li>🇿🇦 R: ${currency.data.ZAR}<li>
-      <li>🇯🇵 ¥ ${currency.data.JPY}<li>`;
+      <li>🇯🇵 ¥ ${currency.data.JPY}<li>
+    `;
   });
